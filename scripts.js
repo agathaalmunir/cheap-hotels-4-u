@@ -5,6 +5,20 @@
 // HOTEL #2 - Name is Quay Hotel, there are 75 total rooms and there are 0 booked rooms
 // HOTEL #3 - Name is Parker Place, there are 140 total rooms and there are 0 booked rooms
 
+const hotels = [{
+    name: 'Hotel Paradise',
+    totalRooms: 50,
+    bookedRooms: 0
+}, {
+    name: 'Quay Hotel',
+    totalRooms: 75,
+    bookedRooms: 0,
+}, {
+    name: 'Parker Place',
+    totalRooms: 140,
+    bookedRooms: 0,
+}]
+
 
 // STEP 2. We missed some additional information for each hotel but its okay! Add the following information below for each hotel object. Do not manipulate the code in Step 1.
 
@@ -12,28 +26,48 @@
 // -has a gym - NO
 // -has a pool - YES
 // -allows pets - NO
-
+hotels[0].hasGym = false;
+hotels[0].hasPool = true;
+hotels[0].allowsPets = false;
+console.log(hotels);
 
 // QUAY HOTEL
 // -has a gym - YES
 // -has a pool - YES
 // -allows pets - YES
-
+hotels[1].hasGym = true
+hotels[1].hasPool = true
+hotels[1].allowsPets = true;
+console.log(hotels);
 
 // PARKER PLACE
 // -has a gym - YES
 // -has a pool - YES
 // -allows pets - YES
+hotels[2].hasGym = true
+hotels[2].hasPool = true
+hotels[2].allowsPets = true;
+console.log(hotels);
 
 
 // STEP 3. Print the name of each hotel on a separate line
 console.log("-------------\n");
 console.log("3. Hotel Names");
 
+const hotelNameList = () => {
+    hotels.forEach((hotelName, index) => {
+        console.log(`${index + 1}. ${hotelName.name}`);
+    });
+}
+hotelNameList()
+
+//remember to have parenthenses when calling a function
+
 
 // STEP 4. Print the total number of rooms each hotel has
 console.log("-------------\n");
 console.log("4. Total Rooms");
+or 
 
 
 // STEP 5. Print the names of hotels that have gyms
@@ -64,4 +98,4 @@ console.log("8. Rooms Available");
 
 // STEP 9. The Marketing Team believes the new site has 500 rooms, but the Construction Team says less than 300. To figure out the actual total, print the total number of rooms by adding this across all 3 hotels.
 console.log("-------------\n");
-console.log("9. Total Rooms Across All Hotels");
+//console.log("9. Total Rooms Across All Hotels")
